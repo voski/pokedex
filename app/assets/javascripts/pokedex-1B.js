@@ -5,7 +5,7 @@ Pokedex.RootView.prototype.renderPokemonDetail = function (pokemon) {
   var $ul =  $('<ul class="poke-details-ul">');
   $div.append($img);
 
-  var ignore = ['image_url', 'created_at', 'updated_at'];
+  var ignore = ['image_url', 'created_at', 'updated_at', 'toys'];
   _.each(pokemon.attributes, (function (attr, key) {
     if (ignore.indexOf(key) < 0) {
       var html = "<li>" + key + ": " + attr + "</li>";
